@@ -5,10 +5,10 @@ import pprint
 res = requests.get('https://news.ycombinator.com/news')
 res2 = requests.get('https://news.ycombinator.com/?p=2')
 
-# obrushtame stringa res.text v html format da moje da go polzvame,obekt koito move da manipulirame
+
 soup = BeautifulSoup(res.text, 'html.parser')
 soup2 = BeautifulSoup(res2.text, 'html.parser')
-# vzima samo body chasta,moje da tursim vsichko s funkciqta soup.find_all('div')
+
 links = (soup.select('.titleline'))
 subtext = (soup.select('.subtext'))
 links2 = (soup2.select('.titleline'))
